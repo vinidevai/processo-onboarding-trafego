@@ -125,11 +125,440 @@
   <button class="tab-btn" onclick="switchTab('lsa',this)">🛡️ Local Services Ads</button>
 </div>
 
-<div id="page-main" class="page active"><header><span class="tag">Processo Interno · Gestão de Tráfego</span><h1>Onboarding de Campanhas<br>para Empresas nos EUA</h1><p>Fluxo padrão — do primeiro contato até campanhas no ar</p></header></div>
 
-<div id="page-gbp" class="page"><header><span class="tag" style="color:var(--accent-teal)">Google Business Profile</span><h1>Google Business Profile</h1></header></div>
+<!-- ══════════════ PAGE 1 · ONBOARDING GERAL ══════════════ -->
+<div id="page-main" class="page active">
+<header>
+  <span class="tag">Processo Interno · Gestão de Tráfego</span>
+  <h1>Onboarding de Campanhas<br>para Empresas nos EUA</h1>
+  <p>Fluxo padrão — do primeiro contato até campanhas no ar</p>
+</header>
+<div class="flow">
 
-<div id="page-lsa" class="page"><header><span class="tag" style="color:var(--accent-purple)">Local Services Ads</span><h1>Local Services Ads</h1></header></div>
+  <span class="section-label label-blue" style="margin-top:0">01 · Informações Gerais do Cliente</span>
+  <div class="node node-blue">
+    <div class="step-num">PASSO 1</div>
+    <div class="node-title"><span>📋</span> Coletar dados básicos do cliente</div>
+    <ul class="checklist">
+      <li>Nome da empresa e segmento</li>
+      <li>Website (URL)</li>
+      <li>Localização / área de atuação nos EUA</li>
+      <li>Objetivo da campanha (leads, ligações, visitas, vendas…)</li>
+      <li>Orçamento mensal disponível para mídia</li>
+    </ul>
+  </div>
+
+  <div class="arrow"><div class="arrow-line"></div><div class="arrow-tip"></div></div>
+
+  <span class="section-label label-orange">02 · Site & Rastreamento Avançado</span>
+
+  <div class="node node-orange">
+    <div class="step-num">PASSO 2A · Acesso ao Site</div>
+    <div class="node-title"><span>🌐</span> Acesso WordPress / CMS</div>
+    <ul class="checklist">
+      <li class="orange">Login de administrador no WordPress (ou CMS utilizado)</li>
+      <li class="orange">Necessário para instalar tags via Google Tag Manager</li>
+    </ul>
+  </div>
+
+  <div class="arrow"><div class="arrow-line"></div><div class="arrow-tip"></div></div>
+
+  <div class="node node-orange">
+    <div class="step-num">PASSO 2B · IDs dos Formulários</div>
+    <div class="node-title"><span>📝</span> Configuração correta dos IDs nos formulários</div>
+    <div class="node-desc">O webdesigner / desenvolvedor deve configurar os IDs conforme abaixo:</div>
+    <ul class="checklist" style="margin-top:12px">
+      <li class="orange">Campo <span class="hi-o">nome</span> → ID: <code>nome</code></li>
+      <li class="orange">Campo <span class="hi-o">e-mail</span> → ID: <code>email</code></li>
+      <li class="orange">Campo <span class="hi-o">telefone</span> → ID: <code>phone</code></li>
+      <li class="orange">O formulário em si → <span class="hi">ID único</span> (ex: <code>form-contato</code>)</li>
+      <li class="orange"><span class="hi">Se houver mais de um formulário:</span> todos os IDs — campos e formulários — devem ser únicos e diferentes entre si</li>
+    </ul>
+  </div>
+
+  <div class="arrow"><div class="arrow-line"></div><div class="arrow-tip"></div></div>
+
+  <div class="node node-orange">
+    <div class="step-num">PASSO 2C · DNS</div>
+    <div class="node-title"><span>🔧</span> Acesso ao Gerenciador de DNS</div>
+    <ul class="checklist">
+      <li class="orange">Acesso ao painel DNS (GoDaddy, Cloudflare, Namecheap…)</li>
+      <li class="orange">Para apontamentos de registros DNS ao servidor de rastreamento</li>
+      <li class="orange">Confirmar provedor com o cliente antes de solicitar acesso</li>
+    </ul>
+  </div>
+
+  <div class="arrow"><div class="arrow-line"></div><div class="arrow-tip"></div></div>
+
+  <span class="section-label label-blue">03 · Plataformas Google</span>
+
+  <div class="branch-wrap three">
+    <div class="branch-card node-blue">
+      <div class="branch-card-title"><span>📣</span> Google Ads</div>
+      <div style="margin:10px 0 6px">
+        <div class="decision" style="margin-bottom:8px"><span class="decision-q">Tem Ads e sabe o ID?</span><span class="badge badge-yes">SIM</span></div>
+        <div style="font-size:12px;color:var(--text-dim);padding-left:8px;margin-bottom:10px">→ Solicitar <span class="hi-b">ID da conta</span> (ex: 123-456-7890)</div>
+        <div class="decision" style="margin-bottom:8px"><span class="decision-q">Tem Ads, não sabe o ID?</span><span class="badge badge-no">NÃO SEI</span></div>
+        <div style="font-size:12px;color:var(--text-dim);padding-left:8px;margin-bottom:10px">→ Solicitar <span class="hi-b">acesso à conta Google</span> onde foi criado</div>
+        <div class="decision"><span class="decision-q">Não tem Google Ads?</span><span class="badge badge-no">NÃO TEM</span></div>
+        <div style="font-size:12px;color:var(--text-dim);padding-left:8px;margin-top:8px">→ Criar nova conta<br>→ Precisará de conta Google (criar se não tiver)</div>
+      </div>
+    </div>
+
+    <div class="branch-card node-blue">
+      <div class="branch-card-title"><span>📍</span> Google Business Profile</div>
+      <ul class="checklist"><li>Ver aba <strong>Google Business Profile</strong> para fluxo completo</li></ul>
+      <div style="margin-top:12px">
+        <div class="decision" style="margin-bottom:8px"><span class="decision-q">Já tem GBP?</span><span class="badge badge-yes">SIM</span></div>
+        <div style="font-size:12px;color:var(--text-dim);padding-left:8px;margin-bottom:10px">→ Solicitar acesso de <span class="hi-b">gerente</span></div>
+        <div class="decision"><span class="decision-q">Não tem GBP?</span><span class="badge badge-no">NÃO</span></div>
+        <div style="font-size:12px;color:var(--text-dim);padding-left:8px;margin-top:8px">→ Criar com conta Google do cliente<br>→ Ver aba GBP para checklist completo</div>
+      </div>
+    </div>
+
+    <div class="branch-card node-blue">
+      <div class="branch-card-title"><span>📊</span> Google Analytics / GA4</div>
+      <div style="margin:10px 0 6px">
+        <div class="decision" style="margin-bottom:8px"><span class="decision-q">Já tem GA4?</span><span class="badge badge-yes">SIM</span></div>
+        <div style="font-size:12px;color:var(--text-dim);padding-left:8px;margin-bottom:10px">→ Solicitar acesso de <span class="hi-b">editor</span> à propriedade</div>
+        <div class="decision"><span class="decision-q">Não tem GA4?</span><span class="badge badge-no">NÃO</span></div>
+        <div style="font-size:12px;color:var(--text-dim);padding-left:8px;margin-top:8px">→ Criar com conta Google do cliente<br>→ Instalar via GTM no WordPress</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow"><div class="arrow-line"></div><div class="arrow-tip"></div></div>
+
+  <span class="section-label label-purple">04 · Meta Ads (Facebook + Instagram)</span>
+
+  <div class="node node-purple">
+    <div class="step-num">PASSO 4A · Business Manager</div>
+    <div class="node-title"><span>🏗️</span> Verificar estrutura do Business Manager (BM)</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0">
+      <div class="decision"><span class="decision-q">Cliente tem BM?</span><span class="badge badge-yes">SIM</span></div>
+      <div class="decision"><span class="decision-q">Não tem BM?</span><span class="badge badge-no">NÃO</span></div>
+    </div>
+    <ul class="checklist">
+      <li class="purple"><span class="hi">Se tem BM:</span> solicitar acesso de <span class="hi-p">Administrador</span></li>
+      <li class="purple"><span class="hi">Se não tem BM:</span> pedir login do Facebook pessoal → criar BM juntos</li>
+    </ul>
+  </div>
+
+  <div class="arrow"><div class="arrow-line"></div><div class="arrow-tip"></div></div>
+
+  <div class="node node-purple">
+    <div class="step-num">PASSO 4B · Checklist dentro do BM</div>
+    <div class="node-title"><span>🔗</span> Verificar vínculos dentro do Business Manager</div>
+    <ul class="checklist">
+      <li class="purple">BM tem acesso de <span class="hi-p">Administrador</span> à <span class="hi">Página do Facebook</span> que será usada?</li>
+      <li class="purple">A Página está <span class="hi-p">vinculada ao Instagram</span> da empresa?</li>
+      <li class="purple">Existe uma <span class="hi-p">Conta de Anúncios</span> dentro do BM? (se não, criar)</li>
+      <li class="purple">Pixel do Meta criado e instalado no site via GTM?</li>
+      <li class="purple">Se vão rodar <span class="hi">anúncios de mensagens:</span> WhatsApp conectado ao BM?</li>
+    </ul>
+  </div>
+
+  <div class="arrow"><div class="arrow-line"></div><div class="arrow-tip"></div></div>
+
+  <span class="section-label label-green">05 · Checklist Final antes de Ativar</span>
+
+  <div class="node node-green">
+    <div class="step-num">VALIDAÇÃO FINAL</div>
+    <div class="node-title"><span>✅</span> Tudo pronto para ativar as campanhas?</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px">
+      <div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--accent-green);margin-bottom:8px;letter-spacing:1px">SITE & TRACKING</div>
+        <ul class="checklist">
+          <li class="green">WordPress acessível ✓</li>
+          <li class="green">IDs dos formulários: <code>nome</code>, <code>email</code>, <code>phone</code> ✓</li>
+          <li class="green">DNS acessível e apontamentos feitos ✓</li>
+          <li class="green">GTM instalado no site ✓</li>
+          <li class="green">GA4 configurado e recebendo dados ✓</li>
+          <li class="green">Meta Pixel disparando ✓</li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--accent-blue);margin-bottom:8px;letter-spacing:1px">PLATAFORMAS DE ANÚNCIO</div>
+        <ul class="checklist">
+          <li class="green">Acesso ao Google Ads confirmado ✓</li>
+          <li class="green">Google Business Profile ativo ✓</li>
+          <li class="green">BM com acesso Admin ✓</li>
+          <li class="green">Página FB vinculada ao IG ✓</li>
+          <li class="green">Conta de Anúncios Meta ativa ✓</li>
+          <li class="green">WhatsApp conectado (se aplicável) ✓</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow"><div class="arrow-line"></div><div class="arrow-tip"></div></div>
+
+  <div class="node" style="border-color:#3dd68c;background:linear-gradient(135deg,#3dd68c18,#4f8ef718);text-align:center;padding:28px">
+    <div style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#fff;margin-bottom:6px">🚀 Campanhas no Ar!</div>
+    <div style="font-size:13px;color:var(--text-dim)">Todas as plataformas verificadas, acessos concedidos e rastreamento ativo.</div>
+  </div>
+
+  <div class="divider"></div>
+  <div class="note-box">
+    <strong>⚠️ Nota para o time:</strong> Nunca suba campanhas sem antes validar o rastreamento. Teste os eventos no <strong>Meta Events Manager</strong> e no <strong>GA4 DebugView</strong> antes de ativar qualquer verba.
+  </div>
+</div>
+</div>
+
+
+<!-- ══════════════ PAGE 2 · GOOGLE BUSINESS PROFILE ══════════════ -->
+<div id="page-gbp" class="page">
+<header>
+  <span class="tag" style="color:var(--accent-teal)">Google Business Profile · Criação e Verificação</span>
+  <h1>Google Business Profile<br><span style="color:var(--accent-teal)">Checklist Completo</span></h1>
+  <p>Todas as informações necessárias para criar e verificar o perfil</p>
+</header>
+<div class="flow">
+
+  <span class="section-label label-teal" style="margin-top:0">01 · Informações da Empresa</span>
+  <div class="node node-teal">
+    <div class="step-num">DADOS BÁSICOS</div>
+    <div class="node-title"><span>🏢</span> Informações obrigatórias para criar o perfil</div>
+    <ul class="checklist">
+      <li class="teal"><span class="hi">Nome da empresa</span> — exatamente como aparece na fachada / documentos oficiais</li>
+      <li class="teal"><span class="hi">Endereço completo</span> — rua, número, cidade, estado, ZIP code</li>
+      <li class="teal"><span class="hi">Número de telefone comercial</span></li>
+      <li class="teal"><span class="hi">E-mail comercial</span></li>
+      <li class="teal"><span class="hi">Website</span> (URL)</li>
+      <li class="teal"><span class="hi">Horários de funcionamento</span> — todos os dias da semana (incluir feriados se aplicável)</li>
+      <li class="teal"><span class="hi">Categoria principal</span> do negócio (ex: Plumber, HVAC Contractor, Electrician…)</li>
+    </ul>
+  </div>
+
+  <div class="arrow"><div class="arrow-line"></div><div class="arrow-tip"></div></div>
+
+  <span class="section-label label-teal">02 · Tipo de Negócio</span>
+  <div class="branch-wrap">
+    <div class="branch-card node-teal">
+      <div class="branch-card-title"><span>🏪</span> Loja / Estabelecimento físico</div>
+      <div style="font-size:12px;color:var(--text-dim);margin-bottom:10px">O cliente vai até o local</div>
+      <ul class="checklist">
+        <li class="teal">Endereço aparece publicamente no perfil</li>
+        <li class="teal">Solicitar <span class="hi">foto da fachada</span></li>
+        <li class="teal">Verificação geralmente por <span class="hi">código postal</span> enviado pelo Google</li>
+      </ul>
+    </div>
+    <div class="branch-card node-teal">
+      <div class="branch-card-title"><span>🚗</span> Empresa de Serviço (SAB)</div>
+      <div style="font-size:12px;color:var(--text-dim);margin-bottom:10px">A empresa vai até o cliente</div>
+      <ul class="checklist">
+        <li class="teal">Endereço fica <span class="hi">oculto</span> no perfil público</li>
+        <li class="teal">Definir <span class="hi">área de cobertura</span> — cidades, condados ou raio</li>
+        <li class="teal">Verificação geralmente por <span class="hi">vídeo</span> (ver passo 05)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="arrow"><div class="arrow-line"></div><div class="arrow-tip"></div></div>
+
+  <span class="section-label label-teal">03 · Área de Cobertura (SABs)</span>
+  <div class="node node-teal">
+    <div class="step-num">SERVICE AREA</div>
+    <div class="node-title"><span>🗺️</span> Onde a empresa presta serviços</div>
+    <ul class="checklist">
+      <li class="teal">Listar <span class="hi">cidades, bairros ou condados</span> atendidos</li>
+      <li class="teal">Ou definir um <span class="hi">raio em milhas</span> a partir do endereço base</li>
+      <li class="teal">Máximo recomendado pelo Google: <span class="hi">20 áreas de cobertura</span></li>
+      <li class="teal">Não exagerar na área — afeta a relevância local do perfil</li>
+    </ul>
+  </div>
+
+  <div class="arrow"><div class="arrow-line"></div><div class="arrow-tip"></div></div>
+
+  <span class="section-label label-teal">04 · Fotos e Mídias</span>
+  <div class="node node-teal">
+    <div class="step-num">ASSETS VISUAIS</div>
+    <div class="node-title"><span>📸</span> Solicitar ao cliente os seguintes materiais</div>
+    <div class="photo-grid">
+      <div class="photo-item"><span>🏷️</span> Logotipo (PNG com fundo transparente)</div>
+      <div class="photo-item"><span>🏢</span> Foto da fachada / exterior (se houver)</div>
+      <div class="photo-item"><span>🚐</span> Veículo adesivado com logo/nome da empresa</div>
+      <div class="photo-item"><span>🔧</span> Equipamentos de serviço</div>
+      <div class="photo-item"><span>👷</span> Funcionários com uniforme da empresa</div>
+      <div class="photo-item"><span>🖼️</span> Fotos de trabalhos realizados</div>
+    </div>
+    <div class="node-desc" style="margin-top:12px">Mínimo recomendado: <span class="hi-t">10 fotos</span> de alta qualidade. Formato JPG/PNG, mínimo 720 × 720px.</div>
+  </div>
+
+  <div class="arrow"><div class="arrow-line"></div><div class="arrow-tip"></div></div>
+
+  <span class="section-label label-yellow">05 · Verificação do Perfil — Vídeo</span>
+  <div class="node node-yellow">
+    <div class="step-num">INSTRUÇÕES PARA O CLIENTE</div>
+    <div class="node-title"><span>🎥</span> Como gravar o vídeo de verificação do Google</div>
+    <div class="node-desc" style="margin-bottom:14px">O Google solicita um vídeo contínuo, sem cortes e sem edição. Instruções para repassar ao cliente:</div>
+    <ul class="checklist">
+      <li class="yellow">Gravar em um único take — <span class="hi">sem cortes, sem edição</span></li>
+      <li class="yellow">Mostrar a <span class="hi">fachada ou local de trabalho</span> com o nome da empresa visível</li>
+      <li class="yellow">Mostrar os <span class="hi">equipamentos de trabalho</span> do serviço</li>
+      <li class="yellow">Mostrar <span class="hi">documentos da empresa</span> (licença, registro) se possível</li>
+      <li class="yellow">Mostrar o <span class="hi">veículo adesivado</span> com nome/logo (se houver)</li>
+      <li class="yellow">Boa iluminação — preferencialmente <span class="hi">durante o dia</span></li>
+      <li class="yellow">Duração ideal: <span class="hi">30 segundos a 2 minutos</span></li>
+      <li class="yellow">Upload feito em: <span class="hi">Google Business Profile → Verificar agora → Gravar vídeo</span></li>
+    </ul>
+    <div class="info-box" style="margin-top:14px">
+      <strong>📌 Prazo:</strong> A análise pelo Google leva de 3 a 5 dias úteis. Se rejeitado, um novo vídeo pode ser solicitado — avisar o cliente sobre isso antecipadamente.
+    </div>
+  </div>
+
+  <div class="arrow"><div class="arrow-line"></div><div class="arrow-tip"></div></div>
+
+  <div class="node" style="border-color:#2dd4bf;background:linear-gradient(135deg,#2dd4bf18,#4f8ef718);text-align:center;padding:24px">
+    <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:6px">📍 Perfil Verificado e Ativo!</div>
+    <div style="font-size:13px;color:var(--text-dim)">Perfil pronto para receber avaliações, aparecer no Google Maps e ser vinculado ao Google Ads.</div>
+  </div>
+
+</div>
+</div>
+
+
+<!-- ══════════════ PAGE 3 · LOCAL SERVICES ADS ══════════════ -->
+<div id="page-lsa" class="page">
+<header>
+  <span class="tag" style="color:var(--accent-purple)">Google Local Services Ads · Verificação Rigorosa</span>
+  <h1>Local Services Ads<br><span style="color:var(--accent-purple)">Checklist Completo</span></h1>
+  <p>Processo mais exigente — documentação e verificação obrigatórias</p>
+</header>
+<div class="flow">
+
+  <span class="section-label label-purple" style="margin-top:0">01 · Dados do Proprietário</span>
+  <div class="node node-purple">
+    <div class="step-num">INFORMAÇÕES PESSOAIS</div>
+    <div class="node-title"><span>👤</span> Dados do proprietário da empresa</div>
+    <ul class="checklist">
+      <li class="purple"><span class="hi">Primeiro nome</span> do proprietário</li>
+      <li class="purple"><span class="hi">Sobrenome</span> do proprietário</li>
+      <li class="purple"><span class="hi">E-mail</span> do proprietário (preferencialmente conta Google)</li>
+    </ul>
+  </div>
+
+  <div class="arrow"><div class="arrow-line"></div><div class="arrow-tip"></div></div>
+
+  <span class="section-label label-purple">02 · Dados da Empresa</span>
+  <div class="node node-purple">
+    <div class="step-num">INFORMAÇÕES DO NEGÓCIO</div>
+    <div class="node-title"><span>🏢</span> Informações obrigatórias da empresa</div>
+    <ul class="checklist">
+      <li class="purple"><span class="hi">Nome da empresa</span> — como consta nos documentos oficiais</li>
+      <li class="purple"><span class="hi">Ano de fundação</span> da empresa</li>
+      <li class="purple"><span class="hi">Endereço completo</span> — rua, número, cidade, estado, ZIP</li>
+      <li class="purple"><span class="hi">Número de telefone comercial</span></li>
+      <li class="purple"><span class="hi">Website</span> (URL)</li>
+      <li class="purple"><span class="hi">Horários de funcionamento</span> — todos os dias da semana</li>
+      <li class="purple"><span class="hi">Área de cobertura</span> — cidades ou condados atendidos</li>
+      <li class="purple"><span class="hi">Número de Field Workers</span> — funcionários que têm contato direto com clientes (presencial ou online)</li>
+    </ul>
+  </div>
+
+  <div class="arrow"><div class="arrow-line"></div><div class="arrow-tip"></div></div>
+
+  <span class="section-label label-red">03 · Documentação Obrigatória</span>
+  <div class="node node-red">
+    <div class="step-num">DOCUMENTOS LEGAIS</div>
+    <div class="node-title"><span>📄</span> Certificate of Insurance (COI) — Obrigatório</div>
+    <div class="node-desc" style="margin-bottom:14px">O Google <span class="hi-r">exige comprovante de seguro ativo</span> para aprovação no LSA. Sem esse documento, a conta não é aprovada.</div>
+
+    <ul class="checklist">
+      <li class="red">Solicitar o <span class="hi">Certificate of Insurance (COI)</span> ao cliente</li>
+      <li class="red">Documento deve estar <span class="hi">vigente e válido</span></li>
+      <li class="red">Deve cobrir a <span class="hi">área de atuação</span> listada no perfil</li>
+      <li class="red">Formatos aceitos: <span class="hi">PDF ou imagem legível</span></li>
+      <li class="red">Alguns estados exigem também <span class="hi">licença profissional</span> (ex: electricians, plumbers) — verificar por estado</li>
+    </ul>
+
+    <!-- REGRA DOS 30 DIAS -->
+    <div style="margin-top:16px;border:1.5px solid #f8717160;border-radius:10px;overflow:hidden;">
+      <div style="background:#f8717118;padding:10px 16px;border-bottom:1px solid #f8717130;display:flex;align-items:center;gap:8px;">
+        <span style="font-size:16px">⏱️</span>
+        <span style="font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--accent-red)">Regra dos 30 Dias — Atenção Obrigatória</span>
+      </div>
+      <div style="padding:14px 16px;display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="background:#f8717120;border-radius:6px;padding:3px 10px;font-family:'DM Mono',monospace;font-size:10px;color:var(--accent-red);white-space:nowrap;flex-shrink:0;margin-top:1px">VERIFICAR</div>
+          <div style="font-size:13px;color:var(--text-dim);line-height:1.6">Antes de enviar, verificar a <span class="hi">data de vencimento</span> do COI. Se o documento vencer em <span class="hi-r">30 dias ou menos</span>, ele <strong style="color:#fff">não pode ser aceito</strong> pelo Google.</div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="background:#fbbf2420;border-radius:6px;padding:3px 10px;font-family:'DM Mono',monospace;font-size:10px;color:var(--accent-yellow);white-space:nowrap;flex-shrink:0;margin-top:1px">AÇÃO</div>
+          <div style="font-size:13px;color:var(--text-dim);line-height:1.6">Orientar o cliente a entrar em contato com sua <span class="hi">seguradora</span> e solicitar a <span class="hi-y">renovação do seguro</span>, pedindo que emitam um novo COI com a data atualizada.</div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="background:#f8717120;border-radius:6px;padding:3px 10px;font-family:'DM Mono',monospace;font-size:10px;color:var(--accent-red);white-space:nowrap;flex-shrink:0;margin-top:1px">RISCO</div>
+          <div style="font-size:13px;color:var(--text-dim);line-height:1.6">Se o COI expirar enquanto a conta estiver ativa, o Google <span class="hi-r">pausa automaticamente os anúncios</span> até que um novo documento válido seja enviado e aprovado.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow"><div class="arrow-line"></div><div class="arrow-tip"></div></div>
+
+  <span class="section-label label-purple">04 · Fotos e Mídias</span>
+  <div class="node node-purple">
+    <div class="step-num">ASSETS VISUAIS — LSA</div>
+    <div class="node-title"><span>📸</span> Materiais visuais necessários</div>
+    <div class="photo-grid">
+      <div class="photo-item"><span>🏷️</span> Logotipo (PNG fundo transparente)</div>
+      <div class="photo-item"><span>🏢</span> Fachada / exterior (se aplicável)</div>
+      <div class="photo-item"><span>🚐</span> Veículo adesivado com logo/nome</div>
+      <div class="photo-item"><span>🔧</span> Equipamentos de serviço</div>
+      <div class="photo-item"><span>👷</span> Funcionários com uniforme</div>
+      <div class="photo-item"><span>🖼️</span> Fotos de trabalhos realizados</div>
+    </div>
+    <div class="node-desc" style="margin-top:12px">As fotos aparecem no card do LSA antes do usuário clicar. <span class="hi-p">Qualidade visual impacta diretamente a taxa de conversão.</span></div>
+  </div>
+
+  <div class="arrow"><div class="arrow-line"></div><div class="arrow-tip"></div></div>
+
+  <span class="section-label label-purple">05 · Background Check & Aprovação</span>
+  <div class="node node-purple">
+    <div class="step-num">VERIFICAÇÃO DE ANTECEDENTES</div>
+    <div class="node-title"><span>🔍</span> Google realiza verificação de antecedentes</div>
+    <ul class="checklist">
+      <li class="purple">O Google faz <span class="hi">background check</span> de proprietários e field workers via parceiro (ex: Evident)</li>
+      <li class="purple">Proprietário e field workers receberão <span class="hi">e-mail com link</span> para completar a verificação</li>
+      <li class="purple">Alertar o cliente: verificar a <span class="hi">caixa de spam</span> — e-mails do parceiro frequentemente caem lá</li>
+      <li class="purple">Processo leva de <span class="hi">3 a 14 dias úteis</span></li>
+      <li class="purple">Após aprovação, o perfil recebe o <span class="hi">Google Guaranteed badge ✅</span></li>
+    </ul>
+  </div>
+
+  <div class="arrow"><div class="arrow-line"></div><div class="arrow-tip"></div></div>
+
+  <span class="section-label label-green">06 · Checklist Final LSA</span>
+  <div class="node node-green">
+    <div class="step-num">VALIDAÇÃO FINAL</div>
+    <div class="node-title"><span>✅</span> Tudo entregue para aprovação?</div>
+    <ul class="checklist" style="margin-top:10px">
+      <li class="green">Primeiro nome e sobrenome do proprietário ✓</li>
+      <li class="green">Ano de fundação da empresa ✓</li>
+      <li class="green">Endereço, telefone, e-mail, horários ✓</li>
+      <li class="green">Número de field workers informado ✓</li>
+      <li class="green">Área de cobertura definida ✓</li>
+      <li class="green">Certificate of Insurance (COI) enviado e vigente ✓</li>
+      <li class="green">Licença profissional (se exigida pelo estado) ✓</li>
+      <li class="green">Fotos e logotipo enviados ✓</li>
+      <li class="green">Background check iniciado — proprietário + field workers ✓</li>
+    </ul>
+  </div>
+
+  <div class="arrow"><div class="arrow-line"></div><div class="arrow-tip"></div></div>
+
+  <div class="node" style="border-color:#a78bfa;background:linear-gradient(135deg,#a78bfa18,#3dd68c18);text-align:center;padding:24px">
+    <div style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:6px">🛡️ Google Guaranteed Ativo!</div>
+    <div style="font-size:13px;color:var(--text-dim)">Perfil aprovado, badge Google Guaranteed exibido e LSA pronto para receber leads.</div>
+  </div>
+
+</div>
+</div>
+
+<div style="text-align:center;margin-top:60px;font-family:'DM Mono',monospace;font-size:11px;color:var(--text-muted);letter-spacing:1px">
+  PROCESSO INTERNO · GESTÃO DE TRÁFEGO · EUA
+</div>
 
 <script>
   function switchTab(tab, btn) {
