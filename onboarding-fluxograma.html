@@ -23,10 +23,15 @@
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; min-height: 100vh; padding: 24px 20px 80px; }
+  @media (max-width: 640px) { body { padding: 12px 14px 60px; } }
 
   /* TABS */
-  .tabs { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 44px; position: sticky; top: 12px; z-index: 100; }
+  .tabs { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 44px; position: sticky; top: 12px; z-index: 100; background: var(--bg); padding: 8px 0; }
   .tab-btn { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; padding: 9px 18px; border-radius: 6px; border: 1px solid var(--border); background: var(--surface); color: var(--text-muted); cursor: pointer; transition: all .2s; }
+  @media (max-width: 640px) {
+    .tabs { gap: 5px; margin-bottom: 28px; top: 0; padding: 8px 0; }
+    .tab-btn { font-size: 9.5px; letter-spacing: 0.8px; padding: 7px 10px; flex: 1 1 auto; min-width: 0; }
+  }
   .tab-btn:hover { color: var(--text); border-color: #3a3a5a; }
   .tab-btn.active { background: #fff; color: #0a0a0f; border-color: #fff; }
 
@@ -49,8 +54,16 @@
 
   /* NODES */
   .node { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px 24px; width: 100%; }
-  .node-title { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .node-title { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; display: flex; align-items: flex-start; gap: 10px; margin-bottom: 4px; }
   .node-desc { font-size: 13px; color: var(--text-dim); margin-top: 6px; line-height: 1.6; }
+  @media (max-width: 640px) {
+    .node { padding: 14px 16px; }
+    .node-title { font-size: 14px; }
+  }
+
+  /* RESPONSIVE TWO-COLUMN GRID (used inline) */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 640px) { .two-col { grid-template-columns: 1fr; gap: 10px; } }
 
   .node-blue   { border-color: #4f8ef740; background: #4f8ef710; }
   .node-green  { border-color: #3dd68c40; background: #3dd68c10; }
@@ -234,7 +247,7 @@
   <div class="node node-purple">
     <div class="step-num">PASSO 4A · Business Manager</div>
     <div class="node-title"><span>🏗️</span> Verificar estrutura do Business Manager (BM)</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0">
+    <div class="two-col" style="margin:12px 0">
       <div class="decision"><span class="decision-q">Cliente tem BM?</span><span class="badge badge-yes">SIM</span></div>
       <div class="decision"><span class="decision-q">Não tem BM?</span><span class="badge badge-no">NÃO</span></div>
     </div>
@@ -265,7 +278,7 @@
   <div class="node node-green">
     <div class="step-num">VALIDAÇÃO FINAL</div>
     <div class="node-title"><span>✅</span> Tudo pronto para ativar as campanhas?</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px">
+    <div class="two-col" style="gap:16px;margin-top:14px">
       <div>
         <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--accent-green);margin-bottom:8px;letter-spacing:1px">SITE & TRACKING</div>
         <ul class="checklist">
